@@ -19,14 +19,14 @@ pipeline {
         
         stage('Build') {
             steps {
-               bat 'mvn clean install'
+               sh 'mvn clean install'
             }
         }
         
         stage('Test') {
             steps {
               script{
-                bat 'mvn test'
+                sh 'mvn test'
               }
                 
                 
